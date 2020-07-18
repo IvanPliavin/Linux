@@ -1,0 +1,15 @@
+ubuntu@ip-172-31-26-125:~$ mkdir first
+ubuntu@ip-172-31-26-125:~$ cd first/
+ubuntu@ip-172-31-26-125:~/first$ echo 1 > first.py
+ubuntu@ip-172-31-26-125:~/first$ less first.py
+ubuntu@ip-172-31-26-125:~/first$ cd ~
+ubuntu@ip-172-31-26-125:~$ mkdir second
+ubuntu@ip-172-31-26-125:~$ cd second/
+ubuntu@ip-172-31-26-125:~/second$ echo 2 > second.py
+ubuntu@ip-172-31-26-125:~/second$ less second.py
+ubuntu@ip-172-31-26-125:~/second$ mv second.py ~/first
+ubuntu@ip-172-31-26-125:~/second$ rm -r ~/second
+ubuntu@ip-172-31-26-125:~/second$ cd ~
+ubuntu@ip-172-31-26-125:~$ mv ~/first ~/first_second
+ubuntu@ip-172-31-26-125:~$ rm -r ~/first_second/
+
