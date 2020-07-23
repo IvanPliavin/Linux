@@ -1,0 +1,28 @@
+ubuntu@ip-172-31-26-125:~$ vim hw_3_1
+ubuntu@ip-172-31-26-125:~$ cat hw_3_1
+print('Hello, world!')
+
+ubuntu@ip-172-31-26-125:~$ wc -l hw_3_1
+1 hw_3_1
+
+ubuntu@ip-172-31-26-125:~$ vim hw_3_3
+ubuntu@ip-172-31-26-125:~$ cat hw_3_3
+print('Linear regression')
+
+ubuntu@ip-172-31-26-125:~$ cat hw_3_1 hw_3_3 > hw_3_5
+ubuntu@ip-172-31-26-125:~$ cat hw_3_5
+print('Hello, world!')
+print('Linear regression')
+
+ubuntu@ip-172-31-26-125:~$ cat hw_3_5 hw_3_5
+print('Hello, world!')
+print('Linear regression')
+print('Hello, world!')
+print('Linear regression')
+ubuntu@ip-172-31-26-125:~$ cat hw_3_5 | wc -l
+2
+ubuntu@ip-172-31-26-125:~$ cat hw_3_5 > copy_hw_3_5
+ubuntu@ip-172-31-26-125:~$ cat copy_hw_3_5
+print('Hello, world!')
+print('Linear regression')
+
