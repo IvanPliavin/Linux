@@ -1,0 +1,29 @@
+ubuntu@ip-172-31-26-125:~$ vim hello.py
+ubuntu@ip-172-31-26-125:~$ cat hello.py
+print('Hello, world')
+ubuntu@ip-172-31-26-125:~$ sudo useradd -m -s /bin/bash user_new
+ubuntu@ip-172-31-26-125:~$ chmod o+w hello.py
+ubuntu@ip-172-31-26-125:~$ ls -l
+total 4
+-rw-rw-rw- 1 ubuntu ubuntu 22 Jul 24 14:52 hello.py
+
+ubuntu@ip-172-31-26-125:~$ su user_new
+Password:
+user_new@ip-172-31-26-125:/home/ubuntu$ vim hello.py
+user_new@ip-172-31-26-125:/home/ubuntu$ cat hello.py
+print('Hello, world. User_new')
+
+user_new@ip-172-31-26-125:/home/ubuntu$ cd ~
+user_new@ip-172-31-26-125:~$ vim numbers.py
+user_new@ip-172-31-26-125:~$ python3 numbers.py
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+user_new@ip-172-31-26-125:~$
