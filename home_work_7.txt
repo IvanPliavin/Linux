@@ -1,0 +1,43 @@
+# 1
+ubuntu@ip-172-31-23-188:~$ ls
+first.py  second.py  test.py  test2.txt  three.py
+ubuntu@ip-172-31-23-188:~$ ls | grep '^t.*.py$'
+test.py
+three.py
+
+#2
+ubuntu@ip-172-31-23-188:~$ ls | grep '.*.py$'
+first.py
+second.py
+test.py
+three.py
+ubuntu@ip-172-31-23-188:~$ cat first.py second.py test.py three.py | grep 'print'
+print('hello second')
+print('Hello test')
+
+#3
+
+ubuntu@ip-172-31-23-188:~$ uptime
+ 12:42:22 up  1:03,  1 user,  load average: 0.07, 0.02, 0.00
+ubuntu@ip-172-31-23-188:~$ uptime grep '.*[],'
+ 12:43:32 up  1:04,  1 user,  load average: 0.02, 0.01, 0.00
+ubuntu@ip-172-31-23-188:~$ uptime | grep '.*[],'
+grep: Unmatched [, [^, [:, [., or [=
+ubuntu@ip-172-31-23-188:~$ uptime | grep '.* .*,'
+ 12:44:35 up  1:05,  1 user,  load average: 0.00, 0.00, 0.00
+ubuntu@ip-172-31-23-188:~$ uptime | sed 's/* \([0-59]\+\),.*/\1/'
+ 12:46:14 up  1:07,  1 user,  load average: 0.00, 0.00, 0.00
+ubuntu@ip-172-31-23-188:~$ uptime | sed 's/.* \([0-59]\+\),.*/\1/'
+ 12:49:55 up  1:10,  1 user,  load average: 0.00, 0.00, 0.00
+ubuntu@ip-172-31-23-188:~$ uptime | sed 's/.* \([0-23]:[0-59]\+\)/*,/\1/'
+sed: -e expression #1, char 29: unknown option to `s'
+ubuntu@ip-172-31-23-188:~$ uptime | sed 's/.* \([0-23:0-59]\+\)/*,/\1/'
+sed: -e expression #1, char 27: unknown option to `s'
+ubuntu@ip-172-31-23-188:~$ uptime | sed 's/.* \([0-23]\):\([0-59]\),.*/\1/
+> -bash: unexpected EOF while looking for matching `''
+-bash: syntax error: unexpected end of file
+ubuntu@ip-172-31-23-188:~$ uptime | sed 's/.* \([0-23]\):\([0-59]\),.*/\1/'
+ 12:57:19 up  1:18,  1 user,  load average: 0.00, 0.00, 0.00
+ubuntu@ip-172-31-23-188:~$ uptime | sed 's/.* \([0-23]\):\([0-59]\),.*/\1/'
+
+
